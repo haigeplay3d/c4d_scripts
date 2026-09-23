@@ -13,14 +13,14 @@
 | 007 | 平面辅助 | [平面宽高比例锁定](../c4d_scripts/PlaneLockRatio/README.md) | `PlaneLockRatio.py` | 源码盘点；本轮未运行 |
 | 008 | 平面辅助 | [平面近似正方形分段](../c4d_scripts/SquareSegementsForPlane/README.md) | `SquareSegementsForPlane.py` | 源码盘点；本轮未运行 |
 | 009 | 变形与开关 | [切换变形器编辑器可见性](../c4d_scripts/DeformerToggle/README.md) | `DeformerToggle.py` | 源码盘点；本轮未运行 |
-| 010 | 变形与开关 | 圆环径向拉伸（本地已有，待纳入） | `RadialStretch.py` | 既有 README 记载宿主验证 |
-| 011 | 变形与开关 | 全场景关闭 Enabled（本地已有，待纳入） | `C4D_BatchDisableBasicEnabled.py` | 源码盘点；本轮未运行 |
+| 010 | 变形与开关 | [圆环径向拉伸](../c4d_scripts/RadialStretch/README.md) | `RadialStretch.py` | 既有 README 记载宿主验证 |
+| 011 | 变形与开关 | [全场景关闭 Enabled](../c4d_scripts/C4D_BatchDisableBasicEnabled/README.md) | `C4D_BatchDisableBasicEnabled.py` | 源码盘点；本轮未运行 |
 | 012 | 材质 | [随机标准材质颜色](../c4d_scripts/RandomColorStandardMaterial/README.md) | `RandomColorStandardMaterial.py` | 源码盘点；本轮未运行 |
-| 013 | 个人设置 | 个人 C4D 偏好设置（本地已有，待纳入） | `presetsbyhaigec4d.py` | 源码盘点；本轮未运行 |
+| 013 | 个人设置 | [个人 C4D 偏好设置](../c4d_scripts/PresetsByHaigeC4D/README.md) | `presetsbyhaigec4d.py` | 源码盘点；本轮未运行 |
 
 ## 版本范围
 
-本次提交含 10 个工具的代码或既有代码入口。编号 010、011、013 的源码和说明仍为本地未跟踪资产，不属于当前提交；暂不提供相对链接，避免远端断链。13 是本地成果总数，不能理解为当前版本已包含 13 个工具。
+13 个已有工具现均纳入版本管理；其中新增纳入的三个工具见 [收录审查](additional-tools-review.md)。纳入 Git 不表示本轮已重新运行全部工具。
 
 ## 计数边界
 
