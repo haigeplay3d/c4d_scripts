@@ -1,0 +1,74 @@
+{
+  "size": [
+    128,
+    128
+  ],
+  "mode": "RGBA",
+  "icons": [
+    {
+      "script": "c4d_scripts/AnnotationFromName/AnnotationFromName.py",
+      "icon": "c4d_scripts/AnnotationFromName/AnnotationFromName.tif",
+      "sha256": "b33768c8edb5fa45ff0e113a341d674f27dd57a348f719491e11fee87169684c"
+    },
+    {
+      "script": "c4d_scripts/C4D_BatchDisableBasicEnabled/C4D_BatchDisableBasicEnabled.py",
+      "icon": "c4d_scripts/C4D_BatchDisableBasicEnabled/C4D_BatchDisableBasicEnabled.tif",
+      "sha256": "993f795c2ee0ad7fc504b4bfd1b218d61a547382487602b5e12e60d68942c59f"
+    },
+    {
+      "script": "c4d_scripts/DeformerToggle/DeformerToggle.py",
+      "icon": "c4d_scripts/DeformerToggle/DeformerToggle.tif",
+      "sha256": "aedaff8f50fb97eb215eb7cbf9094e9b5eb143f6b21a6d2ff4487ac51ba44842"
+    },
+    {
+      "script": "c4d_scripts/DeleteNulls/DeleteNulls.py",
+      "icon": "c4d_scripts/DeleteNulls/DeleteNulls.tif",
+      "sha256": "232c264522a525ce1693373f68322829951e586ad7fe704bdf5ff66f29fd4d40"
+    },
+    {
+      "script": "c4d_scripts/FigureScale/FigureScale.py",
+      "icon": "c4d_scripts/FigureScale/FigureScale.tif",
+      "sha256": "b8d783751ec7a3c8eb222765d4a914b872b80d43ba02dff389db615bc1ff3d72"
+    },
+    {
+      "script": "c4d_scripts/PlaneLockRatio/PlaneLockRatio.py",
+      "icon": "c4d_scripts/PlaneLockRatio/PlaneLockRatio.tif",
+      "sha256": "2f4f592f2631faf95b8cca7b825531116ab4cd3a1b873b85ecc907d396f4b1ab"
+    },
+    {
+      "script": "c4d_scripts/PositionWorldFollow/PositionWorldFollow.py",
+      "icon": "c4d_scripts/PositionWorldFollow/PositionWorldFollow.tif",
+      "sha256": "94eac1ac836a17f4e2e35c3755bf6c1368f404ac624ccd8897de3126b63a4143"
+    },
+    {
+      "script": "c4d_scripts/PresetsByHaigeC4D/presetsbyhaigec4d.py",
+      "icon": "c4d_scripts/PresetsByHaigeC4D/presetsbyhaigec4d.tif",
+      "sha256": "3cce4c82e39d649115ed06bcb80ff71aef11a8f8c39ebdfef26694ab8d968a5c"
+    },
+    {
+      "script": "c4d_scripts/RadialStretch/RadialStretch.py",
+      "icon": "c4d_scripts/RadialStretch/RadialStretch.tif",
+      "sha256": "6c1c0b4ee156f8f43ff9e6bc5a859cb845986b2d8e39f18c52fd023f4bd7c81d"
+    },
+    {
+      "script": "c4d_scripts/RandomColorStandardMaterial/RandomColorStandardMaterial.py",
+      "icon": "c4d_scripts/RandomColorStandardMaterial/RandomColorStandardMaterial.tif",
+      "sha256": "298d5b87fca76870a01c12fc3e1401a28fd351155b42333b7b6ee4608216a3b8"
+    },
+    {
+      "script": "c4d_scripts/RoundXYZ/RoundXYZ.py",
+      "icon": "c4d_scripts/RoundXYZ/RoundXYZ.tif",
+      "sha256": "159af77dc4a557aa8646b84a1490b46163f07f68c2db2f1f18fe8f782a3077db"
+    },
+    {
+      "script": "c4d_scripts/SquareSegementsForPlane/SquareSegementsForPlane.py",
+      "icon": "c4d_scripts/SquareSegementsForPlane/SquareSegementsForPlane.tif",
+      "sha256": "a1a263ab519f4ec13fd13f640c5f213e78c921896469a1495c1ef2011765ef98"
+    },
+    {
+      "script": "c4d_scripts/TagsSameColor/TagsSameColor.py",
+      "icon": "c4d_scripts/TagsSameColor/TagsSameColor.tif",
+      "sha256": "c5589c92b6def2910719f034309dd08083e0c4e81d3ac9bd6f9444319822110f"
+    }
+  ]
+}

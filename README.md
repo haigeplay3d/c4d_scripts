@@ -13,6 +13,12 @@
 - [第一批修复与宿主验收](docs/batch1-hardening.md)
 - [阶段提交范围](docs/batch1-commit-scope.md)
 
+## 脚本图标
+
+![13 个统一脚本图标](assets/icons/preview.png)
+
+透明背景，128×128 TIF，已与脚本同名配套；另保留 SVG 源稿和 PNG 预览。[图标说明与重建](docs/icons.md)。
+
 ## 项目结构
 
 ```text
