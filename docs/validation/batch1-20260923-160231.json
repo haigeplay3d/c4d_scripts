@@ -1,0 +1,231 @@
+{
+  "revision": "batch1-r2-live-object",
+  "time": "20260923-160231-279528",
+  "c4d_version": 2025303,
+  "results": [
+    {
+      "case": "FigureScale parent scale / plane / Undo / Redo",
+      "passed": true
+    },
+    {
+      "case": "DeleteNulls nested order / world matrix / Undo / Redo",
+      "passed": true
+    },
+    {
+      "case": "RoundXYZ default",
+      "passed": true
+    },
+    {
+      "case": "RoundXYZ Alt",
+      "passed": true
+    },
+    {
+      "case": "RoundXYZ Shift",
+      "passed": true
+    },
+    {
+      "case": "RoundXYZ input failure",
+      "passed": true
+    }
+  ],
+  "passed": 6,
+  "total": 6,
+  "diagnostics": [
+    {
+      "phase": "FigureScale undo",
+      "name": "plane",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        2.0,
+        3.0,
+        4.0
+      ]
+    },
+    {
+      "phase": "FigureScale redo",
+      "name": "plane",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        4.0,
+        6.0,
+        8.0
+      ]
+    },
+    {
+      "phase": "RoundXYZ undo",
+      "name": "rounded",
+      "position": [
+        1.2,
+        2.6,
+        -3.1
+      ],
+      "rotation": [
+        0.1790707812546182,
+        0.35325464060365225,
+        -0.5281366316534841
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "phase": "RoundXYZ redo",
+      "name": "rounded",
+      "position": [
+        1.0,
+        3.0,
+        -3.0
+      ],
+      "rotation": [
+        0.1790707812546182,
+        0.35325464060365225,
+        -0.5281366316534841
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "phase": "RoundXYZ undo",
+      "name": "rounded",
+      "position": [
+        1.2,
+        2.6,
+        -3.1
+      ],
+      "rotation": [
+        0.1790707812546182,
+        0.35325464060365225,
+        -0.5281366316534841
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "phase": "RoundXYZ redo",
+      "name": "rounded",
+      "position": [
+        1.2,
+        2.6,
+        -3.1
+      ],
+      "rotation": [
+        0.17976891295541594,
+        0.35255650890285456,
+        -0.5288347633542818
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "phase": "RoundXYZ undo",
+      "name": "rounded",
+      "position": [
+        1.2,
+        2.6,
+        -3.1
+      ],
+      "rotation": [
+        0.1790707812546182,
+        0.35325464060365225,
+        -0.5281366316534841
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "phase": "RoundXYZ redo",
+      "name": "rounded",
+      "position": [
+        1.0,
+        3.0,
+        -3.0
+      ],
+      "rotation": [
+        0.17976891295541594,
+        0.35255650890285456,
+        -0.5288347633542818
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "phase": "RoundXYZ undo",
+      "name": "rounded",
+      "position": [
+        1.2,
+        2.6,
+        -3.1
+      ],
+      "rotation": [
+        0.1790707812546182,
+        0.35325464060365225,
+        -0.5281366316534841
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "phase": "RoundXYZ redo",
+      "name": "rounded",
+      "position": [
+        1.0,
+        3.0,
+        -3.0
+      ],
+      "rotation": [
+        0.1790707812546182,
+        0.35325464060365225,
+        -0.5281366316534841
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "disk_source_sha256": {
+    "tests\\host_batch1.py": "dcb24549db640dfb347d5a9292cdc2a68ef975bf61c880d3d92e8f3b8f94d3df",
+    "c4d_scripts\\FigureScale\\FigureScale.py": "8c3ee81a5062225a3e28053f37f1229cd074222faae9ca7abb0e32eabfaee840",
+    "c4d_scripts\\RoundXYZ\\RoundXYZ.py": "533fc40237fc036b7739ad1faad046a8231ea0f5cb4f27a04f1e4ca8e99f8139",
+    "c4d_scripts\\DeleteNulls\\DeleteNulls.py": "d2adae1be9274fd7677f2d0156ff0f8302a4d44bd9f7c81d9ef051b977456613"
+  }
+}

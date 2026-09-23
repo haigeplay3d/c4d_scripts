@@ -1,20 +1,17 @@
 import c4d
+import math
 
 def get_object_size(obj):
+    """World lengths of local bounding-box axes, including parent/frozen scale.
+
+    These are not world-axis-aligned bounds or deformed-cache dimensions.
     """
-    获取物体的实际尺寸（X, Y, Z），保留4位小数。
-    :param obj: 选择的物体
-    :return: 尺寸元组 (size_x, size_y, size_z)
-    """
-    # 获取物体的边界框半径
     rad = obj.GetRad()
+    matrix = obj.GetMg()
+    return (2 * rad.x * matrix.v1.GetLength(),
+            2 * rad.y * matrix.v2.GetLength(),
+            2 * rad.z * matrix.v3.GetLength())
 
-    # 计算实际尺寸（半径需乘以2），保留4位小数
-    size_x = round(rad.x * 2, 4)
-    size_y = round(rad.y * 2, 4)
-    size_z = round(rad.z * 2, 4)
-
-    return size_x, size_y, size_z
 
 class FigureScaleDialog(c4d.gui.GeDialog):
     IDC_SOURCE_X = 1000
@@ -80,6 +77,9 @@ def main():
     # 获取当前活动文档
     doc = c4d.documents.GetActiveDocument()
 
+    if doc is None:
+        return
+
     # 获取当前选择的物体列表
     selected_objects = doc.GetActiveObjects(c4d.GETACTIVEOBJECTFLAGS_0)
 
@@ -122,38 +122,26 @@ def main():
         # 没有有效输入或者最后输入的值和原来的值相同，不做操作
         return
 
-    # 得到了新的值，进行计算
+    # Only the edited axis is a divisor: a plane can scale by either nonzero axis.
+    if not math.isfinite(original_value) or original_value <= 0:
+        c4d.gui.MessageDialog("该轴尺寸为零或无效，请选择一个非零尺寸轴。")
+        return
+    if not math.isfinite(new_value) or new_value <= 0:
+        c4d.gui.MessageDialog("目标尺寸必须是大于零的有限数值。")
+        return
     ratio = new_value / original_value
-    if dlg.last_input_id == FigureScaleDialog.IDC_SOURCE_X:
-        finalX = new_value
-        finalY = y * ratio
-        finalZ = z * ratio
-    elif dlg.last_input_id == FigureScaleDialog.IDC_SOURCE_Y:
-        finalX = x * ratio
-        finalY = new_value
-        finalZ = z * ratio
-    elif dlg.last_input_id == FigureScaleDialog.IDC_SOURCE_Z:
-        finalX = x * ratio
-        finalY = y * ratio
-        finalZ = new_value
-
-    # 保留四位小数
-    finalX = round(finalX, 4)
-    finalY = round(finalY, 4)
-    finalZ = round(finalZ, 4)
-
-    print(f"finalX: {finalX}, finalY: {finalY}, finalZ: {finalZ}")
-
-    # 计算缩放比例
-    scale_x = finalX / x
-    scale_y = finalY / y
-    scale_z = finalZ / z
-
-    # 获取物体的当前缩放值
     current_scale = obj.GetRelScale()
-    # 应用新的缩放比例
-    new_scale = c4d.Vector(current_scale.x * scale_x, current_scale.y * scale_y, current_scale.z * scale_z)
-    obj.SetRelScale(new_scale)
+    new_scale = current_scale * ratio
+    if not all(math.isfinite(v) for v in (new_scale.x, new_scale.y, new_scale.z)):
+        c4d.gui.MessageDialog("缩放结果超出有效范围，未修改对象。")
+        return
+    c4d.StopAllThreads()
+    doc.StartUndo()
+    try:
+        doc.AddUndo(c4d.UNDOTYPE_CHANGE, obj)
+        obj.SetRelScale(new_scale)
+    finally:
+        doc.EndUndo()
 
     # 更新场景
     c4d.EventAdd()

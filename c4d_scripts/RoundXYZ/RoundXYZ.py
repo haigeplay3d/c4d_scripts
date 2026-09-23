@@ -35,34 +35,39 @@ def main():
         return
 
     # 检测按键状态
+    alt_pressed = False
+    shift_pressed = False
     bc = c4d.BaseContainer()
     if c4d.gui.GetInputState(c4d.BFM_INPUT_KEYBOARD, c4d.BFM_INPUT_CHANNEL, bc):
         qualifier = bc[c4d.BFM_INPUT_QUALIFIER]
         alt_pressed = qualifier & c4d.QALT
         shift_pressed = qualifier & c4d.QSHIFT
 
+    c4d.StopAllThreads()
     doc.StartUndo()
 
-    for obj in selected_objects:
-        doc.AddUndo(c4d.UNDOTYPE_CHANGE, obj)
+    try:
+        for obj in selected_objects:
+            doc.AddUndo(c4d.UNDOTYPE_CHANGE, obj)
 
-        if shift_pressed:
-            # 同时处理坐标和角度
-            pos = obj.GetAbsPos()
-            obj.SetAbsPos(round_position(pos))
+            if shift_pressed:
+                # 同时处理坐标和角度
+                pos = obj.GetAbsPos()
+                obj.SetAbsPos(round_position(pos))
 
-            hpb = obj.GetAbsRot()
-            obj.SetAbsRot(round_rotation(hpb))
-        elif alt_pressed:
-            # 仅处理角度
-            hpb = obj.GetAbsRot()
-            obj.SetAbsRot(round_rotation(hpb))
-        else:
-            # 仅处理坐标
-            pos = obj.GetAbsPos()
-            obj.SetAbsPos(round_position(pos))
+                hpb = obj.GetAbsRot()
+                obj.SetAbsRot(round_rotation(hpb))
+            elif alt_pressed:
+                # 仅处理角度
+                hpb = obj.GetAbsRot()
+                obj.SetAbsRot(round_rotation(hpb))
+            else:
+                # 仅处理坐标
+                pos = obj.GetAbsPos()
+                obj.SetAbsPos(round_position(pos))
 
-    doc.EndUndo()
+    finally:
+        doc.EndUndo()
     c4d.EventAdd()
 
 if __name__ == '__main__':
