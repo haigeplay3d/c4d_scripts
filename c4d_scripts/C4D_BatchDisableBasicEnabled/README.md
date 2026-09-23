@@ -5,7 +5,7 @@
 ## 使用
 
 1. 打开目标文档；不要求选择对象。
-2. 在 C4D 脚本管理器运行同目录的 `C4D_BatchDisableBasicEnabled.py`。
+2. 在 C4D 脚本管理器运行同目录的 `HG_C4D_BatchDisableBasicEnabled.py`。
 3. 检查结果；首次使用请在场景副本中操作。
 
 ## 范围与恢复

@@ -4,7 +4,7 @@
 
 选择对象。默认处理坐标；Alt 仅处理角度；Shift 同时处理坐标和角度；Shift 与 Alt 同按时按 Shift。
 
-在 C4D Script Manager（脚本管理器）运行同目录 `RoundXYZ.py`。首次使用在场景副本中操作。
+在 C4D Script Manager（脚本管理器）运行同目录 `HG_RoundXYZ.py`。首次使用在场景副本中操作。
 
 ## 行为与边界
 

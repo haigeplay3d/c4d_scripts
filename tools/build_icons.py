@@ -67,7 +67,7 @@ class Icon:
         (ASSETS/(stem+'.svg')).write_text(text,encoding='utf-8')
         raster=self.image.resize((128,128),Image.Resampling.LANCZOS)
         raster.save(ASSETS/(stem+'.png'))
-        raster.save(ROOT/'c4d_scripts'/folder/(stem+'.tif'),compression='raw')
+        raster.save(ROOT/'c4d_scripts'/folder/('HG_'+stem+'.tif'),compression='raw')
         return raster
 
 
@@ -191,7 +191,12 @@ def preview(items):
         image.paste(small,(x+103,y+35),small)
         d.rounded_rectangle((x+164,y+17,x+258,y+84),radius=6,fill='#F0F3F6')
         image.paste(small,(x+195,y+35),small)
-        d.text((x+16,y+106),stem,font=font(15),fill='#E2EAF2')
+        label='HG_'+stem
+        label_font=font(15)
+        for size in range(15,9,-1):
+            label_font=font(size)
+            if d.textbbox((0,0),label,font=label_font)[2] <= 246: break
+        d.text((x+16,y+106),label,font=label_font,fill='#E2EAF2')
         d.text((x+16,y+134),title,font=font(14),fill='#9DAFC1')
     image.save(ASSETS/'preview.png')
 
@@ -202,7 +207,7 @@ if __name__=='__main__':
     entries=[]
     for script in sorted((ROOT/'c4d_scripts').glob('*/*.py')):
         icon=script.with_suffix('.tif')
-        if script.stem not in {name for name,_,_ in icons}:
+        if script.stem not in {'HG_'+name for name,_,_ in icons}:
             continue
         entries.append({'script':script.relative_to(ROOT).as_posix(),
                         'icon':icon.relative_to(ROOT).as_posix(),

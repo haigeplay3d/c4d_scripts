@@ -4,7 +4,7 @@
 
 选中待处理对象或层级根；递归处理其下 Null，包含有子对象的 Null。
 
-在 C4D Script Manager（脚本管理器）运行同目录 `DeleteNulls.py`。首次使用在场景副本中操作。
+在 C4D Script Manager（脚本管理器）运行同目录 `HG_DeleteNulls.py`。首次使用在场景副本中操作。
 
 ## 行为与边界
 

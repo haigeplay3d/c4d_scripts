@@ -5,7 +5,7 @@
 ## 使用
 
 1. 选中一个参数化 Plane 对象。
-2. 在 C4D 脚本管理器运行同目录的 `PlaneLockRatio.py`。
+2. 在 C4D 脚本管理器运行同目录的 `HG_PlaneLockRatio.py`。
 3. 检查结果；首次使用请在场景副本中操作。
 
 ## 范围与恢复

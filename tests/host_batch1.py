@@ -15,7 +15,7 @@ import tempfile
 from datetime import datetime
 
 ROOT = Path(__file__).resolve().parents[1]
-TEST_REVISION = 'batch1-r2-live-object'
+TEST_REVISION = 'batch1-r3-hg-prefix'
 DIAGNOSTICS = []
 
 
@@ -41,7 +41,7 @@ class Proxy:
 
 
 def load(name, doc, keys=0, input_ok=True):
-    path = ROOT / 'c4d_scripts' / name / (name + '.py')
+    path = ROOT / 'c4d_scripts' / name / ('HG_' + name + '.py')
     ns = {'__name__': 'host_test_subject', 'doc': doc}
     exec(compile(path.read_text(encoding='utf-8-sig'), str(path), 'exec'), ns)
     def get_input(device, channel, bc):
@@ -220,7 +220,7 @@ def main():
         folder.mkdir(parents=True, exist_ok=True)
         report_path = folder / ('batch1-' + stamp + '.json')
         paths = [Path(__file__).resolve()] + [
-            ROOT / 'c4d_scripts' / name / (name + '.py')
+            ROOT / 'c4d_scripts' / name / ('HG_' + name + '.py')
             for name in ('FigureScale', 'RoundXYZ', 'DeleteNulls')]
         hashes = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
         report = {'revision': TEST_REVISION, 'time': stamp,

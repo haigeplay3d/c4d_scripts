@@ -5,7 +5,7 @@
 ## 使用
 
 1. 选中对象；选择读取包含子级。
-2. 在 C4D 脚本管理器运行同目录的 `RandomColorStandardMaterial.py`。
+2. 在 C4D 脚本管理器运行同目录的 `HG_RandomColorStandardMaterial.py`。
 3. 检查结果；首次使用请在场景副本中操作。
 
 ## 范围与恢复

@@ -87,7 +87,7 @@ def load(name, doc, keys=0, input_ok=True):
     c.documents = types.SimpleNamespace(GetActiveDocument=lambda: doc)
     sys.modules['c4d'] = c
     ns = {'__name__':'test_subject','doc':doc}
-    p=ROOT/'c4d_scripts'/name/(name+'.py')
+    p=ROOT/'c4d_scripts'/name/('HG_'+name+'.py')
     exec(compile(p.read_text(encoding='utf-8-sig'),str(p),'exec'),ns)
     return ns, c
 

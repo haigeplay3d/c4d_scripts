@@ -4,7 +4,7 @@
 
 只选中一个对象，修改 SourceX、SourceY 或 SourceZ 中一个值后确认；以最后编辑的轴为准。取消或不改值不执行。
 
-在 C4D Script Manager（脚本管理器）运行同目录 `FigureScale.py`。首次使用在场景副本中操作。
+在 C4D Script Manager（脚本管理器）运行同目录 `HG_FigureScale.py`。首次使用在场景副本中操作。
 
 ## 行为与边界
 
