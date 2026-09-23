@@ -1,0 +1,20 @@
+# 忽略项目根目录下以 . 开头的文件夹
+/.[^/]*
+
+# 忽略项目中所有层级以 . 开头的文件夹
+**/.[^/]*
+
+# Local development material: keep on disk, exclude from the user-facing repo.
+/tools/
+/tests/
+/pngforgithub/
+/c4dpref.py
+/c4d_scripts/Learn/
+/docs/*
+!/docs/script-catalog.md
+!/docs/installation.md
+!/docs/icons.md
+/assets/icons/*
+!/assets/icons/preview.png
+__pycache__/
+*.pyc

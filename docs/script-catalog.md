@@ -18,12 +18,6 @@
 | 012 | 材质 | [随机标准材质颜色](../c4d_scripts/RandomColorStandardMaterial/README.md) | `HG_RandomColorStandardMaterial.py` | 源码盘点；本轮未运行 |
 | 013 | 个人设置 | [个人 C4D 偏好设置](../c4d_scripts/PresetsByHaigeC4D/README.md) | `HG_presetsbyhaigec4d.py` | 源码盘点；本轮未运行 |
 
-## 版本范围
+## 使用范围
 
-13 个已有工具现均纳入版本管理；其中新增纳入的三个工具见 [收录审查](additional-tools-review.md)。纳入 Git 不表示本轮已重新运行全部工具。
-
-## 计数边界
-
-根目录 `c4dpref.py` 含未定义的 `foo`、`prefs`，暂按历史草稿处理，不计入正式工具。该文件保留原位，未执行、未移动。
-
-外部脚本目录可能有其他工具，不纳入本仓库 13 项计数。
+表内为本项目的 13 个正式工具。请先阅读各工具对选择顺序、全场景操作、持续驱动和恢复方式的说明。
